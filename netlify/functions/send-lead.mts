@@ -141,7 +141,7 @@ export default async (req: Request) => {
             <div style="font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:560px;margin:0 auto;padding:24px;color:#0f172a;">
               <h2 style="margin:0 0 12px;color:#0284c7;">Thanks for reaching out, ${escapeHtml(fullName)}!</h2>
               <p style="line-height:1.6;color:#334155;">We've received your inquiry at <strong>Let It Grow</strong> and our team will respond within 24 hours.</p>
-              <p style="line-height:1.6;color:#334155;">Need a faster response? Call or WhatsApp us directly at <strong>+91 7987631106</strong>.</p>
+              <p style="line-height:1.6;color:#334155;">If you have additional project details to share, simply reply directly to this email.</p>
               <p style="margin-top:24px;font-size:13px;color:#64748b;">— Team Let It Grow · <a href="https://www.letitgrow.in" style="color:#0284c7;">www.letitgrow.in</a></p>
             </div>
           `,

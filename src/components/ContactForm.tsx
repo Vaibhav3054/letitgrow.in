@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { Link } from 'react-router-dom'
 import { AlertCircle, CheckCircle2, Loader2, Send } from 'lucide-react'
 import { BRAND, SERVICES } from '../data/siteData'
 import { submitLead } from '../utils/submitLead'
@@ -68,14 +69,12 @@ export function ContactForm({ defaultService = '' }: ContactFormProps) {
           >
             Send Another Message
           </button>
-          <a
-            href={BRAND.whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-emerald-600 px-5 py-2 text-xs font-semibold text-white transition hover:bg-emerald-700"
+          <Link
+            to="/consultation"
+            className="brand-gradient-bg rounded-full px-5 py-2 text-xs font-semibold text-white transition hover:opacity-90"
           >
-            Fast-Track on WhatsApp
-          </a>
+            Book a Free Consultation
+          </Link>
         </div>
       </div>
     )

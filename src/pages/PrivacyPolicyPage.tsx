@@ -109,12 +109,6 @@ export function PrivacyPolicyPage() {
                 </a>
               </li>
               <li>
-                <strong>Phone / WhatsApp:</strong>{' '}
-                <a href={BRAND.phoneHref} className="text-sky-600 hover:underline dark:text-[#4facfe]">
-                  {BRAND.phoneDisplay}
-                </a>
-              </li>
-              <li>
                 <strong>Location:</strong> {BRAND.location}
               </li>
             </ul>

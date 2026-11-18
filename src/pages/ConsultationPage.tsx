@@ -6,8 +6,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Loader2,
-  MessageCircle,
-  Phone,
+  Mail,
 } from 'lucide-react'
 import { BRAND, CONSULTATION_FAQS, PROCESS_STEPS, SERVICES } from '../data/siteData'
 import { submitLead } from '../utils/submitLead'
@@ -78,7 +77,7 @@ export function ConsultationPage() {
       setMessage('')
     } else {
       setStatus('error')
-      setErrorMsg(res.error || 'Could not submit your request. Please call or WhatsApp us.')
+      setErrorMsg(res.error || 'Could not submit your request. Please email us directly at letitgrow.help@gmail.com.')
     }
   }
 
@@ -152,22 +151,17 @@ export function ConsultationPage() {
 
             <div className="mt-8 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-[#111c33]">
               <p className="text-xs font-bold tracking-wider text-sky-600 uppercase dark:text-[#4facfe]">
-                Prefer a Quick Call or Chat?
+                Prefer Direct Email?
               </p>
-              <div className="mt-3 flex flex-wrap gap-3">
+              <p className="mt-1.5 text-xs text-slate-600 dark:text-slate-300">
+                Write to us anytime and we&apos;ll reply with available slots within 24 hours.
+              </p>
+              <div className="mt-3">
                 <a
-                  href={BRAND.phoneHref}
+                  href={`mailto:${BRAND.email}`}
                   className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold text-slate-800 transition hover:border-sky-400 hover:text-sky-600 dark:border-slate-700 dark:text-slate-200"
                 >
-                  <Phone className="h-3.5 w-3.5" /> {BRAND.phoneDisplay}
-                </a>
-                <a
-                  href={BRAND.whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white transition hover:bg-emerald-700"
-                >
-                  <MessageCircle className="h-3.5 w-3.5" /> WhatsApp Now
+                  <Mail className="h-3.5 w-3.5" /> {BRAND.email}
                 </a>
               </div>
             </div>
@@ -196,12 +190,10 @@ export function ConsultationPage() {
                       Submit Another Request
                     </button>
                     <a
-                      href={BRAND.whatsappHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-full bg-emerald-600 px-5 py-2.5 text-xs font-semibold text-white"
+                      href={`mailto:${BRAND.email}`}
+                      className="brand-gradient-bg rounded-full px-5 py-2.5 text-xs font-semibold text-white"
                     >
-                      Confirm Immediately on WhatsApp
+                      Email Us Directly
                     </a>
                   </div>
                 </div>

@@ -76,6 +76,6 @@ export async function submitLead(data: LeadSubmission): Promise<LeadSubmitResult
   return {
     ok: false,
     via: 'netlify',
-    error: 'We could not send your request right now. Please message us on WhatsApp or call +91 7987631106.',
+    error: 'We could not send your request right now. Please email us directly at letitgrow.help@gmail.com.',
   }
 }

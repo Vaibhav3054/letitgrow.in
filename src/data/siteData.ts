@@ -2,11 +2,6 @@ export const BRAND = {
   name: 'Let It Grow',
   tagline: 'Websites, SaaS Platforms & Custom Business Software',
   email: 'letitgrow.help@gmail.com',
-  phoneDisplay: '+91 7987631106',
-  phoneHref: 'tel:+917987631106',
-  whatsappNumber: '917987631106',
-  whatsappHref:
-    'https://wa.me/917987631106?text=Hi%20Let%20It%20Grow!%20I%27d%20like%20to%20discuss%20a%20project.',
   location: 'Bhopal, Madhya Pradesh, India',
   domain: 'https://www.letitgrow.in',
   foundedYear: 2023,
@@ -253,7 +248,7 @@ export const CONSULTATION_FAQS = [
   {
     question: 'Can I license or customize one of your SaaS platforms like PostPulse or Pathology Lab SaaS?',
     answer:
-      'Absolutely. Both PostPulse and Pathology Lab SaaS are active products built by Let It Grow. Reach out via the consultation form or WhatsApp to request a live walkthrough, onboarding, or custom business integration.',
+      'Absolutely. Both PostPulse and Pathology Lab SaaS are active products built by Let It Grow. Reach out via the consultation form or email us to request a live walkthrough, onboarding, or custom business integration.',
   },
   {
     question: 'How long does it take to launch a website or custom software?',

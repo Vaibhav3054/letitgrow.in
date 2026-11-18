@@ -106,10 +106,7 @@ export function TermsOfServicePage() {
                 </a>
               </li>
               <li>
-                <strong>Phone / WhatsApp:</strong>{' '}
-                <a href={BRAND.phoneHref} className="text-sky-600 hover:underline dark:text-[#4facfe]">
-                  {BRAND.phoneDisplay}
-                </a>
+                <strong>Location:</strong> {BRAND.location}
               </li>
             </ul>
           </section>

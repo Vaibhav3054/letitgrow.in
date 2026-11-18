@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight,
+  CalendarCheck,
   CheckCircle2,
+  Clock,
   Cpu,
   Globe,
   Layers,
   Mail,
   MapPin,
-  MessageCircle,
-  Phone,
   Rocket,
   ShieldCheck,
   Sparkles,
@@ -516,12 +516,10 @@ export function HomePage() {
                 Book Free Consultation <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href={BRAND.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${BRAND.email}`}
                 className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/15 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-xs transition hover:bg-white/25"
               >
-                <MessageCircle className="h-4 w-4" /> WhatsApp {BRAND.phoneDisplay}
+                <Mail className="h-4 w-4" /> Email {BRAND.email}
               </a>
             </div>
           </div>
@@ -549,42 +547,6 @@ export function HomePage() {
           <div className="mt-14 grid gap-10 lg:grid-cols-12">
             <Reveal className="space-y-5 lg:col-span-5">
               <a
-                href={BRAND.phoneHref}
-                className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:-translate-y-0.5 hover:border-sky-300 dark:border-slate-800 dark:bg-[#111c33] dark:hover:border-[#4facfe]/50"
-              >
-                <span className="brand-gradient-bg flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-white">
-                  <Phone className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-xs font-semibold text-slate-500 uppercase dark:text-slate-400">
-                    Call Us
-                  </p>
-                  <p className="text-base font-bold text-slate-900 dark:text-white">
-                    {BRAND.phoneDisplay}
-                  </p>
-                </div>
-              </a>
-
-              <a
-                href={BRAND.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:-translate-y-0.5 hover:border-emerald-300 dark:border-slate-800 dark:bg-[#111c33] dark:hover:border-emerald-500/50"
-              >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white">
-                  <MessageCircle className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-xs font-semibold text-slate-500 uppercase dark:text-slate-400">
-                    WhatsApp Direct
-                  </p>
-                  <p className="text-base font-bold text-slate-900 dark:text-white">
-                    Chat on {BRAND.phoneDisplay}
-                  </p>
-                </div>
-              </a>
-
-              <a
                 href={`mailto:${BRAND.email}`}
                 className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:-translate-y-0.5 hover:border-sky-300 dark:border-slate-800 dark:bg-[#111c33] dark:hover:border-[#4facfe]/50"
               >
@@ -598,6 +560,37 @@ export function HomePage() {
                   <p className="text-base font-bold text-slate-900 dark:text-white">{BRAND.email}</p>
                 </div>
               </a>
+
+              <Link
+                to="/consultation"
+                className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:-translate-y-0.5 hover:border-emerald-300 dark:border-slate-800 dark:bg-[#111c33] dark:hover:border-emerald-500/50"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white">
+                  <CalendarCheck className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold text-slate-500 uppercase dark:text-slate-400">
+                    Free Strategy Call
+                  </p>
+                  <p className="text-base font-bold text-slate-900 dark:text-white">
+                    Book a 30-Min Consultation →
+                  </p>
+                </div>
+              </Link>
+
+              <div className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-[#111c33]">
+                <span className="brand-gradient-bg flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-white">
+                  <Clock className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold text-slate-500 uppercase dark:text-slate-400">
+                    Response Time
+                  </p>
+                  <p className="text-base font-bold text-slate-900 dark:text-white">
+                    Within 24 Hours (Mon–Sat)
+                  </p>
+                </div>
+              </div>
 
               <div className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs dark:border-slate-800 dark:bg-[#111c33]">
                 <span className="brand-gradient-bg flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-white">

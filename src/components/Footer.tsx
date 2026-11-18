@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { CheckCircle2, Mail, MapPin, Phone, Send, Sprout } from 'lucide-react'
+import { CheckCircle2, Mail, MapPin, Send, Sprout } from 'lucide-react'
 import { BRAND, SERVICES } from '../data/siteData'
 import { submitLead } from '../utils/submitLead'
 
@@ -156,15 +156,6 @@ export function Footer() {
             <ul className="mt-5 space-y-3.5 text-sm text-slate-400">
               <li>
                 <a
-                  href={BRAND.phoneHref}
-                  className="flex items-center gap-2.5 transition hover:text-[#4facfe]"
-                >
-                  <Phone className="h-4 w-4 shrink-0 text-[#4facfe]" />
-                  <span>{BRAND.phoneDisplay}</span>
-                </a>
-              </li>
-              <li>
-                <a
                   href={`mailto:${BRAND.email}`}
                   className="flex items-center gap-2.5 transition hover:text-[#4facfe]"
                 >
@@ -177,14 +168,12 @@ export function Footer() {
                 <span>{BRAND.location}</span>
               </li>
             </ul>
-            <a
-              href={BRAND.whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-500/20"
+            <Link
+              to="/consultation"
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-2 text-xs font-semibold text-sky-300 transition hover:bg-sky-500/20"
             >
-              Chat on WhatsApp →
-            </a>
+              Book Free Consultation →
+            </Link>
           </div>
         </div>
 
