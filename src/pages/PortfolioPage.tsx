@@ -7,8 +7,8 @@ import { ProjectCard } from '../components/ProjectCard'
 import { ContactForm } from '../components/ContactForm'
 
 const FILTERS: Array<{ id: ProjectCategory; label: string }> = [
-  { id: 'all', label: 'All Projects (3)' },
-  { id: 'saas', label: 'SaaS Platforms (2)' },
+  { id: 'all', label: 'All Projects (2)' },
+  { id: 'saas', label: 'SaaS Platforms (1)' },
   { id: 'website', label: 'Websites (1)' },
 ]
 
@@ -34,9 +34,9 @@ export function PortfolioPage() {
           Websites
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base dark:text-slate-300">
-          Every project below is live in production. Explore our multi-tenant SaaS products—
-          <strong>PostPulse</strong> and <strong>Pathology Lab SaaS</strong>—alongside our client
-          website <strong>AryaFlow</strong>.
+          Every project below is live in production. Explore our multi-tenant{' '}
+          <strong>Pathology Lab SaaS</strong> platform alongside our client website{' '}
+          <strong>AryaFlow</strong>.
         </p>
 
         {/* Filter Tabs */}
@@ -68,8 +68,12 @@ export function PortfolioPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="mx-auto mt-14 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-3">
+      <section className="mx-auto mt-14 max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div
+          className={`grid gap-8 ${
+            filtered.length === 1 ? 'mx-auto max-w-xl grid-cols-1' : 'md:grid-cols-2'
+          }`}
+        >
           {filtered.map((project, idx) => (
             <Reveal key={project.id} delayMs={idx * 80}>
               <ProjectCard project={project} detailed />

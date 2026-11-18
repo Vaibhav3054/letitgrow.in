@@ -173,8 +173,8 @@ export function ContactForm({ defaultService = '' }: ContactFormProps) {
                 {s.shortTitle}
               </option>
             ))}
-            <option value="PostPulse / Pathology SaaS Demo">
-              Demo: PostPulse / Pathology Lab SaaS
+            <option value="Pathology Lab SaaS Demo">
+              Demo: Pathology Lab SaaS
             </option>
             <option value="Something Else">Something Else</option>
           </select>

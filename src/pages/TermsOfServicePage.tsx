@@ -38,7 +38,7 @@ export function TermsOfServicePage() {
             <h2 className="text-lg font-bold text-slate-900 dark:text-white">1. Services</h2>
             <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
               {BRAND.name} provides website development, SaaS platform engineering and subscriptions
-              (including PostPulse and Pathology Lab SaaS), custom business software, UI/UX design,
+              (including Pathology Lab SaaS), custom business software, UI/UX design,
               and related technical services. Specific deliverables, timelines, and support SLAs are
               governed by each client&apos;s written project proposal or SaaS subscription agreement.
             </p>

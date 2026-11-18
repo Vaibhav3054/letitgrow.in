@@ -109,8 +109,6 @@ export function HomePage() {
 
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-300">
               We engineer high-converting websites, scalable SaaS platforms like{' '}
-              <strong className="font-semibold text-slate-800 dark:text-white">PostPulse</strong>{' '}
-              and{' '}
               <strong className="font-semibold text-slate-800 dark:text-white">
                 Pathology Lab SaaS
               </strong>
@@ -163,7 +161,7 @@ export function HomePage() {
                       Flagship SaaS
                     </p>
                     <p className="mt-0.5 text-sm font-bold text-slate-900 dark:text-white">
-                      PostPulse &amp; Pathology
+                      Pathology Lab SaaS
                     </p>
                   </div>
                   <div className="rounded-xl bg-emerald-50/80 p-3 dark:bg-emerald-950/30">
@@ -298,7 +296,7 @@ export function HomePage() {
             </div>
           </Reveal>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2">
             {PROJECTS.map((project, idx) => (
               <Reveal key={project.id} delayMs={idx * 90}>
                 <ProjectCard project={project} />

@@ -43,7 +43,7 @@ export const SERVICES: ServiceItem[] = [
     highlights: [
       'Multi-tenant architecture & role-based dashboards',
       'Subscription billing, API integrations & automation',
-      'Proven in production with PostPulse & Pathology Lab SaaS',
+      'Proven in production with Pathology Lab SaaS',
     ],
     tags: ['Multi-Tenant', 'Cloud APIs', 'Dashboards', 'Billing'],
     icon: 'layers',
@@ -100,25 +100,6 @@ export interface ProjectItem {
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: 'postpulse-saas',
-    name: 'PostPulse SaaS',
-    category: 'saas',
-    categoryLabel: 'SaaS Platform',
-    badge: 'Flagship SaaS',
-    tagline: 'Multi-Platform Social Media Scheduling & Analytics',
-    description:
-      'A unified social media command center for creators, brands, and agencies to compose, customize, and schedule content across Instagram, Facebook, YouTube, and LinkedIn using official APIs.',
-    highlights: [
-      'Automated scheduled publishing & background batch queues',
-      'Official API integrations across 4 major social channels',
-      'Built for creators, marketing teams & multi-brand agencies',
-    ],
-    tech: ['Next.js', 'TypeScript', 'Serverless Functions', 'Official APIs'],
-    image: '/images/postpulse.webp',
-    liveUrl: 'https://postpulse-saas.netlify.app',
-    consultationService: 'SaaS Platform Development',
-  },
-  {
     id: 'pathology-lab-saas',
     name: 'Pathology Lab SaaS',
     category: 'saas',
@@ -159,8 +140,8 @@ export const PROJECTS: ProjectItem[] = [
 ]
 
 export const STATS = [
-  { value: '2', suffix: '+', label: 'Live SaaS Platforms', sublabel: 'PostPulse & Pathology Cloud' },
   { value: '100', suffix: '%', label: 'Custom-Engineered', sublabel: 'Tailored to your workflow' },
+  { value: 'SaaS', suffix: '', label: 'Production Cloud', sublabel: 'Pathology Lab SaaS live' },
   { value: '24', suffix: 'h', label: 'Response Time', sublabel: 'Direct founder communication' },
   { value: '99.9', suffix: '%', label: 'Cloud Uptime', sublabel: 'Modern edge infrastructure' },
 ] as const
@@ -246,9 +227,9 @@ export const CONSULTATION_FAQS = [
       'Yes! Unlike rigid off-the-shelf subscriptions, we engineer custom dashboards, billing tools, lab/clinic systems, booking portals, and internal CRMs built around how your team actually operates—with room to grow as your business expands.',
   },
   {
-    question: 'Can I license or customize one of your SaaS platforms like PostPulse or Pathology Lab SaaS?',
+    question: 'Can I license or customize your Pathology Lab SaaS platform?',
     answer:
-      'Absolutely. Both PostPulse and Pathology Lab SaaS are active products built by Let It Grow. Reach out via the consultation form or email us to request a live walkthrough, onboarding, or custom business integration.',
+      'Absolutely. Pathology Lab SaaS is an active cloud product built by Let It Grow. Reach out via the consultation form or email us to request a live walkthrough, onboarding, or custom lab workflow integration.',
   },
   {
     question: 'How long does it take to launch a website or custom software?',

@@ -132,14 +132,14 @@ export function ConsultationPage() {
               What You&apos;ll Get in <span className="brand-gradient-text">30 Minutes</span>
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-              Speak directly with the builders behind Let It Grow, PostPulse, and Pathology Lab
-              SaaS—not a scripted sales rep.
+              Speak directly with the builders behind Let It Grow and Pathology Lab SaaS—not a
+              scripted sales rep.
             </p>
             <ul className="mt-6 space-y-3.5 text-sm text-slate-700 dark:text-slate-200">
               {[
                 'Clear recommendation on Website vs. Custom Software vs. SaaS architecture',
                 'Honest timeline and transparent INR budget breakdown',
-                'Live walkthrough of PostPulse or Pathology Lab SaaS (if relevant)',
+                'Live walkthrough of Pathology Lab SaaS (if relevant)',
                 'Actionable next steps you can use immediately—even if we don’t work together',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-2.5">
@@ -326,7 +326,6 @@ export function ConsultationPage() {
                             {s.consultationValue}
                           </option>
                         ))}
-                        <option value="PostPulse SaaS Inquiry">PostPulse SaaS Inquiry</option>
                         <option value="Pathology Lab SaaS Inquiry">
                           Pathology Lab SaaS Inquiry
                         </option>
