@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --brand-start: #4facfe;
+    --brand-end: #00f2fe;
+    --brand-emerald: #10b981;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Signature Let It Grow brand gradient utilities */
+.brand-gradient-text {
+  background: linear-gradient(135deg, #0ea5e9 0%, #4facfe 45%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .brand-gradient-text {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-gradient-bg {
+  background: linear-gradient(135deg, #2563eb 0%, #4facfe 50%, #00d2ff 100%);
+}
+
+.dark .brand-gradient-bg {
+  background: linear-gradient(135deg, #0284c7 0%, #4facfe 55%, #00f2fe 100%);
+}
+
+.brand-glow {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.brand-glow:hover {
+  box-shadow: 0 12px 28px -6px rgba(79, 172, 254, 0.42);
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSlow 6.5s ease-in-out 1.2s infinite;
+}
+
+@keyframes blinkCaret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-caret {
+  animation: blinkCaret 0.9s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float-slow,
+  .animate-float-delayed,
+  .typing-caret {
+    animation: none !important;
+  }
+}

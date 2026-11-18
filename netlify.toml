@@ -1,0 +1,70 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Legacy URL redirects (preserving old links from v1 static site)
+[[redirects]]
+  from = "/Privacy%20Policy.html"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/privacy%20policy.html"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/privacy%20policy"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/terms-of-service.html"
+  to = "/terms-of-service"
+  status = 301
+
+[[redirects]]
+  from = "/consultation.html"
+  to = "/consultation"
+  status = 301
+
+[[redirects]]
+  from = "/portfolio.html"
+  to = "/portfolio"
+  status = 301
+
+# SPA client-side routing fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers for all static responses
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Long-lived cache for Vite hashed assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache static images
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"

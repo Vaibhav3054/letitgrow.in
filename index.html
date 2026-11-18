@@ -1,559 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let It Grow | Emerging Web Development Agency</title>
-    <meta name="description" content="A fresh, passionate web development team crafting digital solutions to help your business grow. Modern websites, apps, and digital experiences.">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
-    <!-- Your CSS File -->
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Additional inline styles for effects */
-        .pulse-effect {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .glow-on-hover:hover {
-            box-shadow: 0 0 15px rgba(79, 172, 254, 0.6);
-        }
-    </style>
-</head>
-<body>
-    <!-- Animated Background Elements -->
-    <div class="bg-shapes">
-        <div class="shape-1 floating" style="top: 10%; left: 5%; width: 100px; height: 100px; background: rgba(79, 172, 254, 0.1); border-radius: 50%; position: fixed; z-index: -1;"></div>
-        <div class="shape-2 floating" style="top: 70%; left: 80%; width: 150px; height: 150px; background: rgba(0, 242, 254, 0.1); border-radius: 50%; position: fixed; z-index: -1; animation-delay: 0.5s;"></div>
-        <div class="shape-3 floating" style="top: 30%; left: 80%; width: 80px; height: 80px; background: rgba(79, 172, 254, 0.1); border-radius: 50%; position: fixed; z-index: -1; animation-delay: 1s;"></div>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let It Grow | Websites, SaaS Platforms & Custom Software Agency</title>
+    <meta
+      name="description"
+      content="Let It Grow builds high-converting websites, scalable SaaS platforms, and custom business software tailored to help startups and businesses grow online."
+    />
+    <link rel="canonical" href="https://www.letitgrow.in/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#4facfe" />
 
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle" id="theme-toggle">
-        <i class="fas fa-moon"></i>
-    </div>
-    
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <i class="fas fa-seedling pulse-effect"></i>
-                    <span class="gradient-text">Let It Grow</span>
-                </a>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" class="cta-button glow-on-hover">Get Started</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.letitgrow.in/" />
+    <meta property="og:site_name" content="Let It Grow" />
+    <meta property="og:title" content="Let It Grow | Websites, SaaS Platforms & Custom Software" />
+    <meta
+      property="og:description"
+      content="Modern websites, multi-tenant SaaS products like PostPulse & Pathology Lab SaaS, and custom business software engineered in Bhopal, India."
+    />
+    <meta property="og:image" content="https://www.letitgrow.in/images/og-preview.png" />
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content animate__animated animate__fadeIn">
-                <h1>Digital Solutions For   <span class="gradient-text" id="typed-text"></span></h1>
-                <p>We're a fresh, passionate team building high-performance websites and applications to help startups and small businesses establish their online presence.</p>
-                <div class="hero-buttons">
-                    <a href="consultation.html" class="btn btn-primary glow-on-hover pulse-effect">Get Free Consultation</a>
-                    <a href="portfolio.html" class="btn btn-secondary glow-on-hover">View Our Work</a>
-                </div>
-                <div class="scrolling-text">
-                    <p><i class="fas fa-bolt"></i> Currently accepting new clients for 2025 <i class="fas fa-bolt"></i></p>
-                </div>
-            </div>
-            <div class="hero-image floating animate__animated animate__fadeInUp">
-                <img src="undraw_proud-coder_9prj.svg" alt="Digital solutions illustration" loading="lazy">
-            </div>
-        </div>
-    </section>
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Let It Grow | Websites, SaaS Platforms & Custom Software" />
+    <meta
+      name="twitter:description"
+      content="Modern websites, multi-tenant SaaS platforms, and tailored business software built to scale."
+    />
+    <meta name="twitter:image" content="https://www.letitgrow.in/images/og-preview.png" />
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Our <span class="gradient-text">Agency</span></h2>
-                <p>We're a new generation of digital creators, combining fresh perspectives with solid technical skills.</p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-image animate__animated animate__fadeInLeft">
-                    <img src="team.jpg" alt="Our Startup Team" loading="lazy">
-                </div>
-                
-                <div class="about-text animate__animated animate__fadeInRight">
-                    <h3>Helping Businesses <span class="gradient-text">Blossom</span> Online</h3>
-                    <p>Founded in 2023, Let It Grow is a boutique web agency focused on delivering exceptional results for startups and small businesses. We may be new, but we're passionate, dedicated, and constantly learning to bring you the best digital solutions.</p>
-                    <p>Our approach is hands-on, transparent, and tailored to your specific needs. We grow with our clients, building long-term relationships rather than one-off projects.</p>
-                    
-                    <div class="about-features">
-                        <div class="feature-item glow-on-hover">
-                            <div class="feature-icon">
-                                <i class="fas fa-bolt gradient-text"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Fresh Perspective</h4>
-                                <p>We bring new ideas and modern approaches to every project</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item glow-on-hover">
-                            <div class="feature-icon">
-                                <i class="fas fa-heart gradient-text"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Passionate Team</h4>
-                                <p>We genuinely care about your success and put heart into our work</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item glow-on-hover">
-                            <div class="feature-icon">
-                                <i class="fas fa-rocket gradient-text"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Fast Execution</h4>
-                                <p>As a small team, we're agile and deliver results quickly</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Fonts: Montserrat & Poppins (matching brand typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Dynamic Stats Section -->
-    <section class="section stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stats-item glow-on-hover">
-                    <span class="stats-counter" id="stats-projects">0</span>
-                    <h4>Projects Completed</h4>
-                    <p>And counting...</p>
-                    <div class="stats-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                </div>
-                <div class="stats-item glow-on-hover">
-                    <span class="stats-counter" id="stats-clients">0</span>
-                    <h4>Satisfied Clients</h4>
-                    <p>Who trust our work</p>
-                    <div class="stats-icon">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                </div>
-                <div class="stats-item glow-on-hover">
-                    <span class="stats-counter" id="stats-coffee">0</span>
-                    <h4>Cups of Coffee</h4>
-                    <p>Fueling our creativity</p>
-                    <div class="stats-icon">
-                        <i class="fas fa-coffee"></i>
-                    </div>
-                </div>
-                <div class="stats-item glow-on-hover">
-                    <span class="stats-counter" id="stats-hours">0</span>
-                    <h4>Hours Invested</h4>
-                    <p>In perfecting our craft</p>
-                    <div class="stats-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our <span class="gradient-text">Services</span></h2>
-                <p>We offer focused digital solutions to help your business establish and grow online.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card glow-on-hover">
-                    <div class="service-icon floating">
-                        <i class="fas fa-code gradient-text"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Custom websites built with modern technologies to showcase your brand and convert visitors.</p>
-                    <div class="service-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <a href="#" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="service-card glow-on-hover">
-                    <div class="service-icon floating">
-                        <i class="fas fa-mobile-alt gradient-text"></i>
-                    </div>
-                    <h3>Mobile Apps</h3>
-                    <p>Cross-platform mobile applications development to engage your audience on the go.</p>
-                    <div class="service-tech">
-                        <span>React Native</span>
-                        <span>Flutter</span>
-                    </div>
-                    <a href="#" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="service-card glow-on-hover">
-                    <div class="service-icon floating">
-                        <i class="fas fa-paint-brush gradient-text"></i>
-                    </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Beautiful, intuitive interfaces that enhance user experience and engagement.</p>
-                    <div class="service-tech">
-                        <span>Figma</span>
-                        <span>Adobe XD</span>
-                    </div>
-                    <a href="#" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="service-cta animate__animated animate__pulse animate__infinite animate__slower">
-                <p>Don't see exactly what you need? We customize our services to fit your requirements.</p>
-                <br>
-                <a href="#contact" class="btn btn-primary">Let's Talk About Your Project</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="sectionp" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our <span class="gradient-text">Work</span></h2>
-                <p>Check out some of our recent projects. We're just getting started and excited to build more!</p>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image-container">
-                        <img src="aryaflow.png" alt="Startup Website" class="portfolio-image" loading="lazy">
-                        <div class="portfolio-badge">New!</div>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Fitness Website</h3>
-                        <p>A modern, responsive website for an yoga instroctor</p>
-                        <a href="portfolio.html" class="btn btn-secondary">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image-container">
-                        <img src="rohnin.png" alt="Business Website" class="portfolio-image1" loading="lazy">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Local Business Website</h3>
-                        <p>Complete online presence for a clothing brand</p>
-                        <a href="portfolio.html" class="btn btn-secondary">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="design">
-                    <div class="portfolio-image-container">
-                        <img src="appdesine.jpg" alt="App Design" class="portfolio-image2" loading="lazy">
-                        <div class="portfolio-badge">Coming Soon</div>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Fitness App Design</h3>
-                        <p>UI/UX design for a workout tracking mobile application</p>
-                        <a href="#" class="btn btn-secondary">Preview Design</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="portfolio-cta">
-                <p>We're currently working on exciting new projects - stay tuned for more!</p>
-                <br>
-                <a href="#contact" class="btn btn-primary">Be Our Next Success Story</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dynamic Skills Section -->
-    <section class="section skills-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our <span class="gradient-text">Tech Stack</span></h2>
-                <p>We work with modern technologies to deliver high-quality solutions</p>
-            </div>
-            
-            <div id="skills-container" class="skills-container">
-                <!-- Skills will be dynamically added here -->
-            </div>
-            
-            <div class="learning-section">
-                <h3>Currently Learning & Exploring</h3>
-                <div id="learning-container" class="skills-container">
-                    <!-- Learning items will be added here -->
-                </div>
-                <p>As a growing agency, we're constantly expanding our skills to serve you better.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client <span class="gradient-text">Feedback</span></h2>
-                <p>Here's what our early clients have to say about working with us</p>
-            </div>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card glow-on-hover">
-                    <div class="client-image-container">
-                        <img src="undraw_young-man-avatar_wgbd.svg" alt="Alex Turner" class="client-image">
-                        <div class="client-quote-mark gradient-text">"</div>
-                    </div>
-                    <p class="testimonial-text">"As a fellow startup, we appreciated Let It Grow's fresh approach. They delivered our website on time and within budget, and were incredibly responsive to all our requests."</p>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star gradient-text"></i>
-                        <i class="fas fa-star gradient-text"></i>
-                        <i class="fas fa-star gradient-text"></i>
-                        <i class="fas fa-star gradient-text"></i>
-                        <i class="fas fa-star gradient-text"></i>
-                    </div>
-                    <h4 class="client-name">Mohit Agrawal</h4>
-                    <p class="client-position">Founder, BloomTech</p>
-                </div>
-                
-                <div class="testimonial-card glow-on-hover">
-                    <div class="client-image-container">
-                        <img src="undraw_young-man-avatar_wgbd.svg" alt="Jamie Chen" class="client-image">
-                        <div class="client-quote-mark gradient-text">"</div>
-                    </div>
-                    <p class="testimonial-text">"I was hesitant to work with a new agency, but Let It Grow proved they could deliver quality work. Their attention to detail and willingness to go the extra mile won me over."</p>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star gradient-text"></i>
-                        <i class="fas fa-star gradient-text"></i>
-                        <i class="fas fa-star gradient-text"></i>
-                        <i class="fas fa-star gradient-text"></i>
-                        <i class="fas fa-star-half-alt gradient-text"></i>
-                    </div>
-                    <h4 class="client-name">Rohit jain</h4>
-                    <p class="client-position">Owner, Local Café</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section ">
-        <div class="container">
-            <h2>Ready to Start Your Project?</h2>
-            <p>We're excited to work with new clients and grow together. Get in touch for a free consultation.</p>
-            <a href="#contact" class="btn5 btn-primary1 glow-on-hover">Let's Get Started</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In <span class="gradient-text">Touch</span></h2>
-                <p>Have a project in mind or questions about our services? We'd love to hear from you.</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info animate__animated animate__fadeInLeft">
-                    <div class="info-item">
-                        <div class="info-icon gradient-text">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Email Us</h4>
-                            <a href="mailto:letitgrow.help@gmail.com">letitgrow.help@gmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon gradient-text">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Call Us</h4>
-                            <a href="tel:+919893515885">+91 9893515885</a>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon gradient-text">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Based In</h4>
-                            <p>Bhopal, (M.P)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link glow-on-hover"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link glow-on-hover"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link glow-on-hover"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link glow-on-hover"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-form animate__animated animate__fadeInRight">
-                  
-                  
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <select name="service" class="form-control" required>
-                                <option value="" disabled selected>What service are you interested in?</option>
-                                <option value="Web Development">Web Development</option>
-                                <option value="Mobile App">Mobile App</option>
-                                <option value="UI/UX Design">UI/UX Design</option>
-                                <option value="other">Something Else</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Tell us about your project..." rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn glow-on-hover">Send Message <i class="fas fa-paper-plane"></i></button>
-                    </form>
-
-
-
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <a href="#" class="footer-logo">
-                        <i class="fas fa-seedling gradient-text"></i>
-                        <span class="gradient-text">Let It Grow</span>
-                    </a>
-                    <p>A fresh web development agency helping startups and small businesses establish their online presence.</p>
-                    <div class="footer-newsletter">
-                        <h4>Join Our Newsletter</h4>
-                        <form class="newsletter-form">
-                            <input type="email" class="newsletter-input" placeholder="Your Email">
-                            <button type="submit" class="newsletter-btn glow-on-hover">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile Apps</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Consultation</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2023</span> Let It Grow. All Rights Reserved.</p>
-                <div class="footer-legal">
-                    <a href="Privacy Policy.html">Privacy Policy</a>
-                    <a href="terms-of-service.html">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top glow-on-hover" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Load EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-        // Initialize EmailJS with your User ID
-        (function() {
-            emailjs.init("J88Rexfe63sHaemW_"); // Replace with your EmailJS User ID
-        })();
+    <!-- Structured Data (LocalBusiness / Organization) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Let It Grow",
+        "url": "https://www.letitgrow.in",
+        "logo": "https://www.letitgrow.in/favicon.svg",
+        "description": "Web development, SaaS platforms, and custom business software engineering agency.",
+        "telephone": "+91-7987631106",
+        "email": "letitgrow.help@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bhopal",
+          "addressRegion": "Madhya Pradesh",
+          "addressCountry": "IN"
+        },
+        "areaServed": "IN"
+      }
     </script>
 
-    <!-- JavaScript -->
-    
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="main.js"></script>
-</body>
+    <!-- Prevent dark-mode flash on load -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('lig-theme');
+          if (saved === 'dark') {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased dark:bg-[#0b1120] dark:text-slate-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
